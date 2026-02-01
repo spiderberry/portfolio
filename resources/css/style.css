@@ -12,24 +12,24 @@ h1, h2, h3 {
 
 main {
     padding: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 /* navbar */
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #4b4237;
+    padding: 0px 20px;
 }
 
 nav ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: auto;
-}
-
-nav li {
-    float: left;
 }
 
 nav li a {
@@ -40,10 +40,10 @@ nav li a {
     text-decoration: none;
 }
 
-nav li a:hover {
-    background-color: #3587A4;
+nav li a.active {
+    background-color: #3587A4 ;
 }
 
-nav li a.active {
+nav li a:hover {
     background-color: #A49694;
 }
