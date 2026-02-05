@@ -1,51 +1,74 @@
+/* 
+*   Reset box-sizing for all elements to border-box and add outline for debugging
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* { outline: 1px solid rgba(30, 117, 28, 1.00); }
+
+/*
+*   Base Styles
+*/
+
+/* Changes font, sets background color, and set margin and padding to 0 for the body */
 body {
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
     background-color: #EDE7D9;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
+/* Sets font thickness for headings */
 h1, h2, h3 {
     font-weight: 550;
 }
 
+/*
+*   Layout Styles
+*/
+
+/* Sets main layout to grid with gap between sections */
 main {
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 10px auto;
-    padding: 20px;
-
     display: grid;
     gap: 10px;
 }
 
-.hero-section, .resume-section, .projects-section {
+/* Container to center content and set max width */
+.container {
+    width: 100%;
+    max-width: 1280px;
     margin: 0px auto;
+    padding: 0px 20px;
     box-sizing: border-box;
+}
+
+/* 
+*   Section Styles
+*/
+
+/* Sets section to use full width */
+.projects-section, .resume-section, .hero-section {
+    width: 100%;
+    padding: 10px 0px;
     text-align: center;
-
 }
 
+/* Hero section styling */
 .hero-section {
-    background-color: #A49694;
+    background-color: #3587A4;
 }
 
-.headshot-img {
-    width: 350px;
-    height: auto;
-    border-radius: 47.5%;
+.resume-section {
+    display: grid;
 }
 
-.home-project-img {
-    width: 100%;
-    height: auto;
-}
-
-.project-card {
-    width: 100%;
-    border: 2px solid #4b4237;
-}
+/*
+*   Components
+*/
 
 .project-row {
     display: grid;
@@ -53,7 +76,38 @@ main {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* navbar */
+.project-card {
+    width: 100%;
+    background-color: #A49694;
+    border-radius: 9.375%;
+    box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.home-project-img {
+    width: 100%;
+    height: auto;
+}
+
+.resume-card {
+    width: 25%;
+    margin: 0px auto;
+    background-color: #A49694;
+    border-radius: 9.375%;
+    box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.headshot-img {
+    width: 350px;
+    height: auto;
+    border-radius: 47.5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+}
+
+/* 
+*   navbar 
+*/
+
+/* sets navbar to flexbox, aligns items, and sets background color and padding */
 nav {
     display: flex;
     justify-content: space-between;
@@ -62,14 +116,16 @@ nav {
     padding: 0px 20px;
 }
 
+/* sets navbar list to flexbox and removes default list styling */
 nav ul {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: auto;
 }
 
+/* styles navbar links */
 nav li a {
     display: block;
     color: white;
@@ -79,9 +135,9 @@ nav li a {
 }
 
 nav li a.active {
-    background-color: #3587A4 ;
+    background-color: #A49694 ;
 }
 
 nav li a:hover {
-    background-color: #A49694;
+    background-color: #736B60;
 }
