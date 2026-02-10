@@ -51,7 +51,7 @@ main {
 */
 
 /* Sets section to use full width */
-.projects-section, .resume-section, .hero-section {
+section {
     width: 100%;
     padding: 10px 0px;
     text-align: center;
@@ -62,31 +62,9 @@ main {
     background-color: #3587A4;
 }
 
-.resume-section {
-    display: grid;
-}
-
 /*
 *   Components
 */
-
-.project-row {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.project-card {
-    width: 100%;
-    background-color: #A49694;
-    border-radius: 9.375%;
-    box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
-}
-
-.home-project-img {
-    width: 100%;
-    height: auto;
-}
 
 .resume-card {
     width: 25%;
@@ -94,6 +72,67 @@ main {
     background-color: #A49694;
     border-radius: 9.375%;
     box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.resume-card iframe {
+    width: 100%;
+    height: auto;
+}
+
+.project-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.project-card {
+    width: 32%;
+    background-color: #A49694;
+    border-radius: 9.375%;
+    box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 9.375%;
+}
+
+.project-item img {
+    width: 25%;
+    height: auto;
+    border-radius: 9.375%;
+}
+
+.home-project-img {
+    width: 100%;
+    height: auto;
+}
+
+.coursework-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.course-item {
+    width: 25%;
+    height: 150px;
+    margin: 0px auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #A49694;
+    border-radius: 9.375%;
+    box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.course-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 9.375%;
 }
 
 .headshot-img {
