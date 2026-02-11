@@ -1,21 +1,24 @@
-/* 
-*   Reset box-sizing for all elements to border-box and add outline for debugging
-*/
+/* =========================
+   RESET GLOBALS
+========================= */
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-* { outline: 1px solid rgba(30, 117, 28, 1.00); }
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-/*
-*   Base Styles
-*/
+/* =========================
+   BASE STYLES
+========================= */
 
 /* Changes font, sets background color, and set margin and padding to 0 for the body */
 body {
     font-family: "Inter Tight", sans-serif;
-    font-optical-sizing: auto;
     background-color: #EDE7D9;
     margin: 0px;
     padding: 0px;
@@ -26,9 +29,9 @@ h1, h2, h3 {
     font-weight: 550;
 }
 
-/*
-*   Layout Styles
-*/
+/* =========================
+   LAYOUT
+========================= */
 
 /* Sets main layout to grid with gap between sections */
 main {
@@ -46,10 +49,6 @@ main {
     box-sizing: border-box;
 }
 
-/* 
-*   Section Styles
-*/
-
 /* Sets section to use full width */
 section {
     width: 100%;
@@ -57,17 +56,35 @@ section {
     text-align: center;
 }
 
+/* =========================
+   COMPONENTS
+========================= */
+
 /* Hero section styling */
 .hero-section {
     background-color: #3587A4;
 }
 
-/*
-*   Components
-*/
 
+
+.headshot-img {
+    width: 350px;
+    height: auto;
+    border-radius: 47.5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+}
+
+.background-box {
+    background-color: #4b4237;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Resume  styling */
 .resume-card {
-    width: 25%;
+    width: 32%;
+    height: 360px;
     margin: 0px auto;
     background-color: #A49694;
     border-radius: 9.375%;
@@ -76,31 +93,32 @@ section {
 
 .resume-card iframe {
     width: 100%;
-    height: auto;
+    height: 225px;
 }
 
+.resume-card iframe:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
+}
+
+/* Featured Projects section styling (index) */
+
 .project-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
     gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .project-card {
-    width: 32%;
+    width: 100%;
     background-color: #A49694;
     border-radius: 9.375%;
     box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
 }
 
 .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 9.375%;
-}
-
-.project-item img {
-    width: 25%;
+    width: 80%;
     height: auto;
     border-radius: 9.375%;
 }
@@ -110,41 +128,110 @@ section {
     height: auto;
 }
 
+.home-project-img:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
+}
+
+/* Projects page section styling */
+
+.project-item {
+    padding: 10px;
+    border-radius: 3%;
+    margin: 24px 0;
+
+    background-color: #A49694;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.project-item img {
+    width: 25%;
+    height: auto;
+    border-radius: 9.375%;
+}
+
+.project-item img:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
+}
+
+/* Coursework section styling */
+
 .coursework-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center;
+    padding: 20px;
     gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    background-color: #4b4237;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 3.125%;
 }
 
 .course-item {
-    width: 25%;
-    height: 150px;
+    width: 75%;
+    height: auto;
     margin: 0px auto;
+
     display: grid;
     align-items: center;
     justify-content: center;
+
     background-color: #A49694;
     border-radius: 9.375%;
     box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
+
+    overflow: hidden
+}
+
+.course-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 20px 50px rgba(0, 0, 0, 1);
+    border: 1px solid black;
 }
 
 .course-item img {
-    width: 100%;
+    width: 80%;
     height: auto;
+    object-fit: cover;
     border-radius: 9.375%;
 }
 
-.headshot-img {
-    width: 350px;
-    height: auto;
-    border-radius: 47.5%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1)
+.course-item img:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
 }
 
-/* 
-*   navbar 
-*/
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+    border: 1px solid black;
+}
+
+
+/* Table styling */
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  background-color: #3587A4;
+  color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #A49694;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 /* sets navbar to flexbox, aligns items, and sets background color and padding */
 nav {
