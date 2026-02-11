@@ -65,8 +65,6 @@ section {
     background-color: #3587A4;
 }
 
-
-
 .headshot-img {
     width: 350px;
     height: auto;
@@ -86,6 +84,7 @@ section {
     width: 32%;
     height: 360px;
     margin: 0px auto;
+    padding: 6px;
     background-color: #A49694;
     border-radius: 9.375%;
     box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
@@ -112,6 +111,7 @@ section {
 
 .project-card {
     width: 100%;
+    padding: 5px;
     background-color: #A49694;
     border-radius: 9.375%;
     box-shadow: 4px 10px 25px rgba(0, 0, 0, 1);
@@ -172,6 +172,7 @@ section {
 .course-item {
     width: 75%;
     height: auto;
+    padding: 12px;
     margin: 0px auto;
 
     display: grid;
@@ -203,6 +204,14 @@ section {
     border: 1px solid black;
 }
 
+.gallery-item {
+    margin: 12px auto;
+}
+
+.gallery-item img {
+    width: 400px;
+    height: auto;
+}
 
 .gallery-item img:hover {
     transform: scale(1.03);
